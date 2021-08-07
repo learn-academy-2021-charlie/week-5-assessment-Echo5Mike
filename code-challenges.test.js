@@ -16,23 +16,93 @@
 // --------------------1) Create a function that takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0.
 
 // a) Create a test with an expect statement using the variables provided.
+// git a test outline and input the basic test conditon
+    // test will take in a string
+    // test will check to make sure that vowels are changed to intengers
+// TEST must fail]
+// create fn that will take generice string
+    //AEIOU will be swapped
+    //fn should return a string.
 
+describe("a function", () => {
+    it("function that takes in a string", () => {
+      expect(someTimesY("Lackadaisical")).toEqual("L4ck4d41s1c4l")
+      expect(someTimesY("Gobbledygook")).toEqual("G0bbl3dyg00k")
+      expect(someTimesY("Eccentric")).toEqual("3cc3ntr1c")
+    })
+})
+// make code generic
+const someTimesY = (string)=>{
+    outPut = []
+    // maybe put extra letters in outCast. .slice .splice. pop?
+    outCast= []
+    makeArray = (string).split("")
+    for (let i = 0; i < makeArray.length; i++) {
+        if(makeArray[i] == "a" || makeArray[i] == "A")
+            outPut.push("4")
+        else if (makeArray[i] == "e"|| makeArray[i] == "E")
+            outPut.push("3")
+        else if (makeArray[i] == "i"|| makeArray[i] == "I")
+            outPut.push("1")
+        else if (makeArray[i] == "o"|| makeArray[i] == "O")
+            outPut.push("0")
+            // how to return the remaining letters
+        else outPut.push(makeArray[i])
+    }
+    return outPut.join("")
+
+}
 var secretCodeWord1 = "Lackadaisical"
+console.log(someTimesY(secretCodeWord1))
 // Expected output: "L4ck4d41s1c4l"
 var secretCodeWord2 = "Gobbledygook"
+console.log(someTimesY(secretCodeWord2))
 // Expected output: "G0bbl3dyg00k"
 var secretCodeWord3 = "Eccentric"
+console.log(someTimesY(secretCodeWord3))
 // Expected output: "3cc3ntr1c"
 
+// const someTimesY = (string)=>{
+//     outPut = []
+//     makeArray = (string).split("")
+//     for (let i = 0; i < makeArray.length; i++) {
+//         if(makeArray[i] == "a" || makeArray[i] == "A")
+//             outPut.push("4")
+//         else if (makeArray[i] == "e"|| makeArray[i] == "E")
+//             outPut.push("3")
+//         else if (makeArray[i] == "i"|| makeArray[i] == "I")
+//             outPut.push("1")
+//         else if (makeArray[i] == "o"|| makeArray[i] == "O")
+//             outPut.push("0")
+//         else (makeArray[i] !== "a" || makeArray[i] !== "A" || makeArray[i] !== "i"|| makeArray[i] !== "I" || makeArray[i] !== "o"|| makeArray[i] !== "O" || makeArray[i] !== "e"|| makeArray[i] !== "E")
+//             outPut.push(makeArray[i])
+//     }
+//     return outPut
 
+// }
 
 // b) Create the function that makes the test pass.
-
+//////////////////////
+//////////////////////
+//////////////////////
+//////////////////////
 
 
 // --------------------2) Create a function that takes in an array and returns all the words that contain the letter a.
-
 // a) Create a test with an expect statement using the variable provided.
+// Create a shell test with 
+    // test will take in pickerArray
+    // test will .map or forloop for all words that contain a in the name.
+//fn will take in array of words and return only workds that have a
+// maybe a filter method?
+
+describe("only words with a's", () => {
+    it("returtakes in an array and returns all the words that contain the letter a", () => {
+      expect(pickerArray(["Apple", "Banana", "Plum", "Orange", "Kiwi"])).toEqual(["Apple", "Banana", "Orange"])
+      expect(pickerArray(["Mango", "Cherry", "Apricot", "Blueberry", "Peach"])).toEqual(["Mango", "Apricot", "Peach"])
+    })
+})
+  
 
 var arrayOfWords1 = ["Apple", "Banana", "Plum", "Orange", "Kiwi"]
 // Expected output: ["Apple", "Banana", "Orange"]
@@ -44,6 +114,13 @@ var arrayOfWords2 = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach"]
 // b) Create the function that makes the test pass.
 
 
+//////////////////////
+//////////////////////
+//////////////////////
+//////////////////////
+//////////////////////
+//////////////////////
+//////////////////////
 
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind.
 
